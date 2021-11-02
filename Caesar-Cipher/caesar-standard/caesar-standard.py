@@ -2,6 +2,8 @@
 # which uses a symbol set and a key
 # came from cracking codes with python
 
+import pyperclip
+
 SYMBOL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?."
 
 # Alternate Symbols with " and ' in it 
@@ -34,6 +36,7 @@ def caesar_engine(original_message):
                 processed_value = processed_value + len(SYMBOL)
         processed_message += SYMBOL[processed_value]
 
+    pyperclip.copy(processed_message)
     return(processed_message)
 
 
