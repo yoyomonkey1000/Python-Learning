@@ -2,11 +2,12 @@
 # which uses a symbol set and a key
 # came from cracking codes with python
 
-input_message = "Hello agai@!n"
-decision = 'e'
-output_message = ""
 SYMBOL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-key = 2
+
+input_message = input("Please enter in string here : ")
+decision = input("Would you like to (e)ncrypt or (d)ecrypt? ")
+key = int(input("Please enter in key number : "))
+output_message = ""
 
 def get_input(original_message):
     return original_message
@@ -18,31 +19,25 @@ def caesar_engine(original_message):
     
     for char in original_message:
         if char not in SYMBOL:
-            processed_message += char    
+            processed_message += char
+            continue   
         elif decision == "e":
             processed_value = SYMBOL.index(char) + key
-            if processed_value > len(SYMBOL):
-                processed_value = SYMBOL[processed_value] - len(SYMBOL)
-            processed_message += SYMBOL[processed_value]
+            if processed_value > len(SYMBOL)-1:
+                processed_value = processed_value - len(SYMBOL)
         elif decision == 'd':
             processed_value = SYMBOL.index(char) - key
             if processed_value < 0:
-                processed_value = SYMBOL[processed_value] + len(SYMBOL)
-            processed_message += SYMBOL[processed_value]
-        else:
-            print("You have entered invalid input")
+                processed_value = processed_value + len(SYMBOL)
+        processed_message += SYMBOL[processed_value]
+    
 
     return(processed_message)
-
-
 
 
 def main():
     print(get_input(input_message))
     print(caesar_engine(input_message))
-
-
-
 
 
 
