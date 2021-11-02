@@ -2,7 +2,7 @@
 # which uses a symbol set and a key
 # came from cracking codes with python
 
-import pyperclip
+# import pyperclip THIS DOESN@T WORK TOOK IT OUT 
 
 SYMBOL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?."
 
@@ -36,7 +36,7 @@ def caesar_engine(original_message):
                 processed_value = processed_value + len(SYMBOL)
         processed_message += SYMBOL[processed_value]
 
-    pyperclip.copy(processed_message)
+     # pyperclip.copy(processed_message) this FILE DOESNT WORK
     return(processed_message)
 
 
