@@ -23,7 +23,7 @@ def caesar_engine(original_message):
             continue   
         elif decision == "e":
             processed_value = SYMBOL.index(char) + key
-            if processed_value > len(SYMBOL)-1:
+            if processed_value > len(SYMBOL) - 1:
                 processed_value = processed_value - len(SYMBOL)
         elif decision == 'd':
             processed_value = SYMBOL.index(char) - key
