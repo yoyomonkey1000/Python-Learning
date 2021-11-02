@@ -11,4 +11,4 @@ original_message = original_message.lower()
 
 
 
-print(original_message, "will be encrypted to" , encrypted_message)
+print(original_message, "will be encrypted to", encrypted_message)
