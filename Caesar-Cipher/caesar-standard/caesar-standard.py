@@ -2,7 +2,10 @@
 # which uses a symbol set and a key
 # came from cracking codes with python
 
-SYMBOL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+SYMBOL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?."
+
+# Alternate Symbols with " and ' in it 
+# SYMBOL ="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890 !?.\'\""
 
 input_message = input("Please enter in string here : ")
 decision = input("Would you like to (e)ncrypt or (d)ecrypt? ")
