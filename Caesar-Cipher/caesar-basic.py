@@ -8,6 +8,14 @@ encrypted_message = ""
 
 original_message = original_message.lower()
 
+for char in original_message:
+    if char == 'z':
+        encrypted_message += 'a'
+    elif char == ' ':
+        encrypted_message += ' '
+    else:
+        encrypted_message += (chr(ord(char)+1))
+
 
 
 
