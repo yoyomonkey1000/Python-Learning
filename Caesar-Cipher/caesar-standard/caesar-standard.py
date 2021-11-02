@@ -30,7 +30,6 @@ def caesar_engine(original_message):
             if processed_value < 0:
                 processed_value = processed_value + len(SYMBOL)
         processed_message += SYMBOL[processed_value]
-    
 
     return(processed_message)
 
