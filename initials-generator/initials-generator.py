@@ -7,9 +7,9 @@ def initials_generator(firstname, middlename, lastname):
 
 
 def main():
-    firstname = "
-    middlename = "ali"
-    lastname = "arshad"
+    firstname = input("Please enter firstname")
+    middlename = input("Please enter middlename ")
+    lastname = input("Please enter lastname")
 
     print(initials_generator(firstname, middlename, lastname))
 
