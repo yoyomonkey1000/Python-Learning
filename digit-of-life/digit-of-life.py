@@ -17,5 +17,5 @@ def digSum( n):
     return sum
  
 
-n = 19991229
+n = int()
 print (digSum(n))
