@@ -1,23 +1,25 @@
-# digit of life
-# get a string of numbers add them up
-# keep adding the digits until its a single digit
+# Python program to find sum of
+# digits of a number until
+# sum becomes single digit.
+ 
 
-number = "13"
-number_list = number.split()
-
-digits = 0
-total = 0
-
-#if True:
-while digits != 1:
-    for num in number_list:
-        total += (int(num))
-        digits = int(len(str(total)))
-    number_list = str(total) 
-    number_list = number_list.split()  
-
-
-print(digits)
-
-print("Final Total is ", total)
-
+# method to find sum of digits
+# of a number until sum becomes
+# single digit
+def digSum( n):
+    sum = 0
+     
+    while(n > 0 or sum > 9):
+     
+        if(n == 0):
+            n = sum
+            sum = 0
+         
+        sum += n % 10
+        n //= 10
+    
+    return sum
+ 
+# Driver method
+n = 1234567689234234234234234
+print (digSum(n))
