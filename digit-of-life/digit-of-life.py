@@ -1,11 +1,7 @@
-# Python program to find sum of
-# digits of a number until
-# sum becomes single digit.
- 
+# digits of life
+# get a string of numbers and add each digit up and print out total. 
+# keep repeating until there is one digit
 
-# method to find sum of digits
-# of a number until sum becomes
-# single digit
 def digSum( n):
     sum = 0
      
@@ -15,11 +11,11 @@ def digSum( n):
             n = sum
             sum = 0
          
-        sum += n % 10
-        n //= 10
+        sum += n % 10 # do a modulus of 0 and any remainder add it to the sum
+        n //= 10 #floor division so you drop the unit and assign it back to n
     
     return sum
  
-# Driver method
-n = 1234567689234234234234234
+
+n = 19991229
 print (digSum(n))
