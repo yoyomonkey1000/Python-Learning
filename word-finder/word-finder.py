@@ -2,11 +2,12 @@
 # takes 2 inputs and tells you if the second word exists in the first.
 
 
-def word_finder(word_one, word_two):
-    if word_one.find(word_two) != -1:
-        print(f"{word_two} is in {word_one}")
-    else:
-        print(f"{word_two} is not in {word_one}")
+def word_finder(string_one, word_one):
+    for char in word_one:
+        print(second_word.find(char))
+       # string_one.find(char)
+
+
 
 #inputs
 first_word=(input("Please type in your word that you want to search: ").lower())
