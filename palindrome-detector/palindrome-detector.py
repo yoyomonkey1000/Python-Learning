@@ -3,9 +3,6 @@
 # turn to lowercase, checks is the first and 
 # last letter the same and works its way in. 
 
-inp_message = "Go hang a salami, I’m a lasagna hog."
-#inp_message = (input("Please enter in your string: "))
-
 
 def palindrome_engine(input_message): 
 
@@ -33,8 +30,16 @@ def palindrome_engine(input_message):
     return True
 
 
-if palindrome_engine(inp_message):
-    print(f"The string {inp_message} is a palindrome")
-else:
-    print(f"The string {inp_message} is not a palidrome")
+def main():
 
+    inp_message = "Go hang a salami, I’m a lasagna hog."
+    #inp_message = (input("Please enter in your string: "))
+
+    if palindrome_engine(inp_message):
+        print(f"The string {inp_message} is a palindrome")
+    else:
+        print(f"The string {inp_message} is not a palidrome")
+
+
+if __name__ == "__main__":
+    main()
