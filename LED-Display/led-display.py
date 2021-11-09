@@ -68,15 +68,7 @@ pattern = [ [['#','#','#'],
 
 
 
-def display_LED():
-
-    num = '-1'
-
-    while int(num) < 0:
-        num = input("Enter num")
-
-        if num.isnumeric == False:
-            num = '-1' # if not a number keep this set to -1 so it will continue to ask for a number
+def display_LED(num):
 
     for line in range(5): # so a number has come in so it must repeat 5 times for each row of the character
         print() #blank line
@@ -104,5 +96,18 @@ def display_LED():
                      print(pattern[(9)][line][column],end=' ')
         #print()
 
+def main():
 
-display_LED()
+    number = '-1'
+
+    while int(number) < 0:
+        number = input("Enter num: ")
+        display_LED(number)
+
+        if number.isnumeric == False:
+            number = '-1' # if not a number keep this set to -1 so it will continue to ask for a number
+
+
+
+if __name__ == "__main__":
+     main()

@@ -2,20 +2,24 @@
 # get a string of numbers and add each digit up and print out total. 
 # keep repeating until there is one digit
 
-def digSum( n):
+def dig_sum(number):
     sum = 0
      
-    while(n > 0 or sum > 9):
+    while(number > 0 or sum > 9):
      
-        if(n == 0):
+        if(number == 0):
             n = sum
             sum = 0
          
-        sum += n % 10 # do a modulus of 0 and any remainder add it to the sum
-        n //= 10 #floor division so you drop the unit and assign it back to n
+        sum += number % 10 # do a modulus of 0 and any remainder add it to the sum
+        number //= 10 #floor division so you drop the unit and assign it back to n
     
     return sum
  
+def main():
+    n = int(input("Enter your number "))
+    final_num = (dig_sum(n))
+    print(f"The final number is {final_num}")
 
-n = int()
-print (digSum(n))
+if __name__ == "__main__":
+    main()
