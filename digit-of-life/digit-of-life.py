@@ -5,15 +5,16 @@
 def dig_sum(number):
     sum = 0
      
-    while(number != 0 or (int(len(str(sum)))) > 1 or sum == 0):
+    while(number != 0) : # or (int(len(str(sum)))) > 1 or sum == 0):
      
-        #if(number == 0):
+        if (int(len(str(sum)))) != 1 or sum == 0:
          #   n = sum
          #   sum = 0
-         
-        sum += number % 10 # do a modulus of 0 and any remainder add it to the sum
-        number //= 10 #floor division so you drop the unit and assign it back to n
-        print(sum)
+            sum += number % 10 # do a modulus of 0 and any remainder add it to the sum
+            number //= 10 #floor division so you drop the unit and assign it back to n
+            print(sum) 
+        else:
+            return sum 
     
     return sum
  
