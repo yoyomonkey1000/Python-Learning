@@ -47,5 +47,5 @@ def main():
     
     print(f"{input_message} will be changed to {output_message}")
 
-
-main()
+if __name__ == "__main__":
+    main()

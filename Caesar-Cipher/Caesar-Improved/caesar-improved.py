@@ -2,14 +2,8 @@
 # Leeps letters case 
 # Do the ASCII ORD conversion + key 
 
-orig_message = "Hello World"
-out_message = ""
-choice = "e"
-key = 20
 
-
-
-def caesar_engine(original_message, choice):
+def caesar_engine(original_message, choice, key):
     output_message=""
     char =""
 
@@ -44,8 +38,16 @@ def caesar_engine(original_message, choice):
     return output_message
 
 
-print(orig_message)
-out_message = (caesar_engine(orig_message, 'e'))
-print(out_message)
-reverse_message = (caesar_engine(out_message, 'd'))
-print(reverse_message)
+def main():
+    orig_message = "Hello World"
+    out_message = ""
+    choice = "e"
+    key = 20
+    print(orig_message)
+    out_message = (caesar_engine(orig_message, 'e', key))
+    print(out_message)
+    reverse_message = (caesar_engine(out_message, 'd', key))
+    print(reverse_message)
+
+if __name__ == "__main__":
+    main()
